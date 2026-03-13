@@ -1,6 +1,6 @@
 # Reddit UI/UX リサーチスキル
 
-r/UI_Design と r/UXDesign から高評価なアプリUI/UX事例を調査し、Markdownレポートとして出力する。
+r/SideProject と r/iOSProgramming から高評価なアプリ・サービスの紹介投稿を調査し、Markdownレポートとして出力する。
 
 **前提:** `scripts/fetch_reddit.py` がプロジェクトルートに存在すること（Python 3 標準ライブラリのみ使用）。
 
@@ -26,8 +26,8 @@ r/UI_Design と r/UXDesign から高評価なアプリUI/UX事例を調査し、
 #### 1-1: 各サブレディットのトップ投稿を取得する
 
 ```bash
-python scripts/fetch_reddit.py UI_Design 25
-python scripts/fetch_reddit.py UXDesign 25
+python scripts/fetch_reddit.py SideProject 25
+python scripts/fetch_reddit.py iOSProgramming 25
 ```
 
 スクリプトの出力形式：
@@ -89,14 +89,14 @@ mkdir -p reports/[調査年]/[調査実行日YYYYMMDD]
 
 **調査対象年:** [年号 または「直近」]
 **調査日:** [YYYY年MM月DD日]
-**調査元:** r/UI_Design, r/UXDesign
+**調査元:** r/SideProject, r/iOSProgramming
 **選定基準:** upvote数・受賞/特集実績
 
 ---
 
 ## 調査サマリー
 
-- 収集した投稿数: XX件（UI_Design: XX件、UXDesign: XX件）
+- 収集した投稿数: XX件（SideProject: XX件、iOSProgramming: XX件）
 - 最終選定: 10件
 - upvote数合計（選定分）: XX,XXX
 
