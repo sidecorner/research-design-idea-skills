@@ -8,7 +8,7 @@ Reddit の UI/UX コミュニティから高評価な投稿を収集し、Markdo
 
 ### `/reddit-ui-research`
 
-r/UI_Design と r/UXDesign から高評価な UI/UX 投稿を調査し、TOP 10 をまとめた Markdown レポートを自動生成する。
+r/SideProject と r/iOSProgramming から実際のアプリ・サービス紹介投稿を調査し、TOP 10 をまとめた Markdown レポートを自動生成する。
 
 ---
 
@@ -30,10 +30,10 @@ r/UI_Design と r/UXDesign から高評価な UI/UX 投稿を調査し、TOP 10 
 ```
 scripts/fetch_reddit.py
   └─ old.reddit.com の JSON API へアクセス（認証不要）
-       ├─ r/UI_Design  25件取得
-       └─ r/UXDesign   25件取得
+       ├─ r/SideProject    25件取得
+       └─ r/iOSProgramming 25件取得
             ↓
-       upvote数でランキング → TOP 10 選定
+       upvote数でランキング → TOP 10 選定（実アプリ・サービス投稿を優先）
             ↓
        reports/[年]/[YYYYMMDD]/[HHmmss].md に保存
 ```
@@ -46,15 +46,15 @@ scripts/fetch_reddit.py
 python scripts/fetch_reddit.py <subreddit> <limit>
 
 # 例
-python scripts/fetch_reddit.py UI_Design 25
-python scripts/fetch_reddit.py UXDesign 10
+python scripts/fetch_reddit.py SideProject 25
+python scripts/fetch_reddit.py iOSProgramming 10
 ```
 
 出力形式：
 
 ```
-- [37pts] Landing page feedback
-  https://old.reddit.com/r/UI_Design/comments/...
+- [756pts] I built a wallpaper that shifts perspective when you move your head
+  https://old.reddit.com/r/SideProject/comments/...
 ```
 
 ---
